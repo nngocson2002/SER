@@ -1,0 +1,25 @@
+audio:
+  ckpt: openai/whisper-small
+  seq_len: 1500
+  input_dim: 768
+  freeze: True
+text:
+  ckpt: bert-base-uncased
+  input_dim: 768
+  freeze: True
+encoder:
+  multiway: True
+  layernorm_embedding: False
+  share_encoder_input_output_embed: False
+  normalize_output: True
+  no_output_layer: True
+  drop_path_rate: 0.3
+  encoder_embed_dim: 768
+  encoder_attention_heads: 4
+  encoder_layers: 4
+  encoder_ffn_embed_dim: 3072
+  max_source_positions: 2048
+  dropout: 0.0
+  no_scale_embedding: True
+classifier:
+  num_classes: 2
